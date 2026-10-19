@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Shakira — catatan keuangan pribadi yang mewah, rahasia, dan hanya untuk satu orang.">
+<title>Shakira 🖤 — Keuangan Pribadiku</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230b0b0e'/><text x='50' y='68' font-size='56' text-anchor='middle' fill='%23d4af37' font-family='Georgia'>S</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="aset/gaya.css">
+</head>
+<body>
+
+<!-- ============ LAYAR KUNCI / RUANG PRIBADI ============ -->
+<div id="layarKunci" class="layar-kunci">
+  <div class="kilau kilau-1"></div><div class="kilau kilau-2"></div><div class="kilau kilau-3"></div>
+  <div class="kartu-kunci">
+    <div class="mahkota">👑</div>
+    <div class="merek-kunci">Shakira <span class="hati">🖤</span></div>
+    <div class="slogan-kunci">Keuangan Pribadiku · Mewah · Rahasia</div>
+    <div id="isiKunci"></div>
+    <div class="catatan-kerahasiaan">🔒 100% pribadi — seluruh data hanya tersimpan di perangkat ini.<br>Tidak dikirim ke peladen mana pun, tidak bisa dilihat orang lain.</div>
+  </div>
+</div>
+
+<!-- ============ APLIKASI UTAMA ============ -->
+<div id="aplikasi" class="aplikasi tersembunyi">
+  <!-- Bilah samping -->
+  <aside class="bilah-samping">
+    <div class="merek">
+      <div class="monogram">S</div>
+      <div>
+        <div class="nama-merek">Shakira 🖤</div>
+        <div class="slogan-merek">KEUANGAN PRIBADIKU</div>
+      </div>
+    </div>
+    <nav class="navigasi" id="navigasi">
+      <button data-halaman="beranda" class="tautan-nav aktif"><span>🏠</span>Beranda</button>
+      <button data-halaman="transaksi" class="tautan-nav"><span>💎</span>Transaksi</button>
+      <button data-halaman="dompet" class="tautan-nav"><span>👛</span>Dompet Saya</button>
+      <button data-halaman="anggaran" class="tautan-nav"><span>🎯</span>Anggaran</button>
+      <button data-halaman="tujuan" class="tautan-nav"><span>👑</span>Tujuan Tabungan</button>
+      <button data-halaman="utang" class="tautan-nav"><span>🤝</span>Utang &amp; Piutang</button>
+      <button data-halaman="kalender" class="tautan-nav"><span>📅</span>Kalender</button>
+      <button data-halaman="laporan" class="tautan-nav"><span>📊</span>Laporan</button>
+      <button data-halaman="pengaturan" class="tautan-nav"><span>⚙️</span>Pengaturan</button>
+    </nav>
+    <div class="kartu-mini-samping">
+      <div class="label-mini">✨ Ruang Rahasia</div>
+      <p>Hanya kamu yang memegang kuncinya. Jaga kata sandimu baik-baik ya.</p>
+      <button class="tombol tombol-garis-emas tombol-kecil" id="tombolKunciSamping">🔒 Kunci Sekarang</button>
+    </div>
+    <div class="profil-samping">
+      <div class="foto-profil">S</div>
+      <div>
+        <div class="nama-profil" id="namaProfilSamping">Shakira</div>
+        <div class="jabatan-profil">Pemilik Tunggal 👑</div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Isi utama -->
+  <div class="utama">
+    <header class="kepala">
+      <div>
+        <div class="sapaan-kecil" id="sapaanKecil">Selamat datang kembali,</div>
+        <h1 class="judul-halaman" id="judulHalaman">Beranda</h1>
+      </div>
+      <div class="aksi-kepala">
+        <label class="kotak-cari">
+          <span>🔍</span>
+          <input type="text" id="cariGlobal" placeholder="Cari transaksi…">
+        </label>
+        <button class="tombol tombol-garis" id="tombolKunciAtas" title="Kunci aplikasi">🔒 Kunci</button>
+        <button class="tombol tombol-emas" id="tombolTambahGlobal">＋ Tambah Transaksi</button>
+      </div>
+    </header>
+    <main id="konten" class="konten"></main>
+    <footer class="kaki">Shakira 🖤 — dibuat dengan sepenuh hati, hanya untuk satu orang istimewa.</footer>
+  </div>
+
+  <!-- Navigasi bawah untuk gawai -->
+  <nav class="navigasi-bawah" id="navigasiBawah">
+    <button data-halaman="beranda" class="aktif"><span>🏠</span>Beranda</button>
+    <button data-halaman="transaksi"><span>💎</span>Transaksi</button>
+    <button class="tombol-tengah" id="tombolTambahBawah">＋</button>
+    <button data-halaman="anggaran"><span>🎯</span>Anggaran</button>
+    <button data-halaman="laporan"><span>📊</span>Laporan</button>
+  </nav>
+</div>
+
+<!-- Lapisan jendela timbul -->
+<div id="lapisanModal" class="lapisan-modal tersembunyi">
+  <div class="modal">
+    <div class="kepala-modal">
+      <h3 id="judulModal">Judul</h3>
+      <button class="tombol-tutup" id="tombolTutupModal" aria-label="Tutup">✕</button>
+    </div>
+    <div id="isiModal" class="isi-modal"></div>
+  </div>
+</div>
+
+<div id="pemberitahuan" class="pemberitahuan tersembunyi"></div>
+
+<script src="aset/aplikasi.js"></script>
+</body>
+</html>
